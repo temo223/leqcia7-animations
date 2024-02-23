@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.surat1, .surat2 {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 50%;
+    transform: translateX(-50%);
+    transition: transform 4s ease-in-out;
+}
+
+.surat1 {
+    left: 20%;
+    animation: swapAnimation 12s linear infinite;
+}
+
+.surat2 {
+    right: 20%;
+    animation: swapAnimation 12s linear infinite;
+}
+
+@keyframes swapAnimation {
+    0% {
+        transform: translateX(20%);
+    }
+    25% {
+        transform: translateX(-20%);
+    }
+    50% {
+        transform: translateX(20%);
+    }
+    75% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(20%);
+    }
+}
